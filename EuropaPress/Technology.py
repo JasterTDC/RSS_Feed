@@ -3,32 +3,44 @@
 import datetime
 
 # Technology class.
-class Tecnology:
+class Technology:
 
-    # Class constructor.
-    def __init__(self, title, description, date, link, category):
+    # Title setter.
+    def setTitle (self, title):
         self.title = title
-        self.description = description
+
+    # Description setter.
+    def setDescription (self, desc):
+        self.description = desc
+
+    # Date setter.
+    def setDate (self, date):
         self.date = date
+
+    # Link setter.
+    def setLink (self, link):
         self.link = link
-        self.category = category
+
+    # Category setter.
+    def setCategory (self, categ):
+        self.category = categ
 
     # Title getter.
-    def getTitle () :
+    def getTitle (self) :
         return self.title
 
     # Description getter.
-    def getDescription () :
+    def getDescription (self) :
         return self.description
 
     # Date getter.
-    def getDate () :
+    def getDate (self) :
         return self.date
 
     # Link getter.
-    def getLink () :
+    def getLink (self) :
         return self.link
 
     # Category list getter.
-    def getCategory () :
+    def getCategory (self) :
         return self.category
