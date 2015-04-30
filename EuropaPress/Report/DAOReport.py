@@ -20,3 +20,23 @@ class DAOReport :
             "date" : report.getDate(),
             "category" : report.getCategory()
         })
+
+    # Class modifier that insert a report into a mongodb.
+    def insertInternationalReport (self, report):
+        self.app.inter.insert_one ({
+            "title" : report.getTitle(),
+            "description" : report.getDescription(),
+            "link" : report.getLink(),
+            "date" : report.getDate(),
+            "category" : report.getCategory()
+        })
+
+    # Class modifier that insert a report into a mongodb.
+    def insertNationalReport (self, report):
+        self.app.nat.insert_one ({
+            "title" : report.getTitle(),
+            "description" : report.getDescription(),
+            "link" : report.getLink(),
+            "date" : report.getDate(),
+            "category" : report.getCategory()
+        })
