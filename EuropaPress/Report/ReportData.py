@@ -3,7 +3,7 @@
 import datetime
 
 # Technology class.
-class Technology:
+class Report:
 
     # Title setter.
     def setTitle (self, title):
