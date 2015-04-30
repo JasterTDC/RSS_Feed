@@ -9,8 +9,9 @@ import datetime
 europaTech = Channel ("http://www.europapress.es/rss/rss.aspx?ch=445")
 europaInter = Channel ("http://www.europapress.es/rss/rss.aspx?ch=69")
 europaNat = Channel ("http://www.europapress.es/rss/rss.aspx?ch=66")
+europaBus = Channel ("http://www.europapress.es/rss/rss.aspx?buscar=Nepal")
 
-list = europaNat.extractFeed ()
+list = europaBus.extractFeed ()
 
 reportDB = DAOReport ()
 
@@ -29,4 +30,6 @@ for i in range (0, len (list)):
         if (elem == 4):
             rep.setCategory (list[i][elem])
 
-    reportDB.insertNationalReport (rep)
+    print ("Title: " + rep.getTitle())
+    print ("Description: " + rep.getDescription())
+    print ("")
