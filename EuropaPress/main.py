@@ -26,4 +26,4 @@ for i in range (0, len (list)):
         if (elem == 4):
             rep.setCategory (list[i][elem])
 
-    reportDB.insertReport (rep)
+    reportDB.insertFeedReport (rep)

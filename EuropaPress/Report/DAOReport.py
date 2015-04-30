@@ -12,7 +12,7 @@ class DAOReport :
         self.app = self.client.app # Select database.
 
     # Class modifier that insert a report into a mongodb.
-    def insertReport (self, report):
+    def insertFeedReport (self, report):
         self.app.feed.insert_one ({
             "title" : report.getTitle(),
             "description" : report.getDescription(),
