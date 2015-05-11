@@ -11,7 +11,7 @@ europaInter = Channel ("http://www.europapress.es/rss/rss.aspx?ch=69")
 europaNat = Channel ("http://www.europapress.es/rss/rss.aspx?ch=66")
 europaBus = Channel ("http://www.europapress.es/rss/rss.aspx?buscar=Nepal")
 
-list = europaBus.extractFeed ()
+list = europaNat.extractFeed ()
 
 reportDB = DAOReport ()
 
@@ -30,6 +30,5 @@ for i in range (0, len (list)):
         if (elem == 4):
             rep.setCategory (list[i][elem])
 
-    print ("Title: " + rep.getTitle())
-    print ("Description: " + rep.getDescription())
-    print ("")
+    if (reportDB.findNationalReportByTitle(rep) == 0):
+        reportDB.insertNationalReport (rep)
